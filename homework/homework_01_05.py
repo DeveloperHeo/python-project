@@ -1,7 +1,7 @@
 class OutOfRangeError(Exception):
     pass
 
-def inputDan():
+def input_dan():
     try:
         dan = int(input("몇 단을 출력 하시겠습니까?"))
 
@@ -13,9 +13,9 @@ def inputDan():
 
     except:
         print("2에서 9사이의 숫자만 입력해주세요.")
-        inputDan()
+        input_dan()
 
-inputDan()
+input_dan()
 
 
 
