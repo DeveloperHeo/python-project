@@ -2,8 +2,11 @@
 
 {% block body %}
 <div class="colorful-text">
-    <div>Hello World, {{ name }}</div>
+    <!--<div>Hello World, {{ name }}</div>-->
     <div>Hello World, marco</div>
     <div>Hello World, rachel</div>
+    {% for article in article_list %}
+        <div>{{ article.title }}</div>
+    {% endfor %}
 </div>
 {% endblock %}
