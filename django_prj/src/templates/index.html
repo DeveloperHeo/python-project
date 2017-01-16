@@ -1,12 +1,26 @@
 {% extends "base.html" %}
 
 {% block body %}
-<div class="colorful-text">
-    <!--<div>Hello World, {{ name }}</div>-->
-    <div>Hello World, marco</div>
-    <div>Hello World, rachel</div>
-    {% for article in article_list %}
-        <div>{{ article.title }}</div>
-    {% endfor %}
+<div class="container">
+    <div class="col-xs-6">
+        <div class="colorful-text">
+            <!--<div>Hello World, {{ name }}</div>-->
+            <div>Hello World, marco</div>
+            <div>Hello World, rachel</div>
+      </div>
+    </div>
+    <div class="col-xs-6">
+        {% for article in article_list %}
+            <div>
+                {{ article.title }}
+                <span class="label label-default">{{ article.view_count }}</span>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="col-xs-12">
+        <i class="fa fa-stop" aria-hidden="true"></i>
+        <i class="fa fa-play" aria-hidden="true"></i>
+        <i class="fa fa-play fa-spin" aria-hidden="true"></i>
+    </div>
 </div>
 {% endblock %}
